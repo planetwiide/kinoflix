@@ -48,6 +48,36 @@ cd kinoflix
 python main.py
 ```
 
+here’s a refined version of the instructions for adding a movie:
+
+---
+
+## 🎬 adding a movie 
+
+to add a movie to **kinoflix**, follow these steps:
+
+1. **place the movie file** in the `media` directory.
+   - supported formats: **mkv**, **avi**, and **mp4**.
+
+2. **rename the movie file** to a simple name, like:
+   - "fight club" or "blade runner 2049".
+
+3. **add the cover image**:
+   - place the cover image in the `media_infos` directory.
+   - rename the cover image to match the movie name (e.g., "fight club.png" or "blade runner 2049.png").
+
+4. **copy the template**:
+   - copy the `template.yml` file from the `media_infos` directory.
+   - rename it to match your movie title (e.g., "fight club.yml" or "blade runner 2049.yml").
+
+5. **edit the information**:
+   - open the renamed `.yml` file in Notepad or any plain text editor.
+   - update the details as needed.
+
+---
+
+let me know if you need any more modifications!
+
 ## 🖥️ usage 
 
 1. open your web browser and navigate to `http://localhost:5000`.
