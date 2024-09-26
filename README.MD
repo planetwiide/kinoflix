@@ -20,8 +20,6 @@
 - [ ] user managment app 🌩️
 - [ ] search bar 🔍
 
-you can add or modify items as needed!
-
 ## 🚀 features 
 
 - **user authentication** 🪪
