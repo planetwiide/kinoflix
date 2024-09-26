@@ -15,15 +15,16 @@
 
 ## ✅ to-do list 
 
-- [ ] settings menu ⚙️
+- [ ] settings menu (themes, rename, pfp) ⚙️
 - [ ] account management 👤
+- [ ] user managment app 🌩️
 - [ ] search bar 🔍
 
 you can add or modify items as needed!
 
 ## 🚀 features 
 
-- **user authentication** 🔑  
+- **user authentication** 🪪
   secure login and user management.
 
 - **responsive dashboard** 📊  
@@ -32,8 +33,8 @@ you can add or modify items as needed!
 - **movie streaming** 🎥  
   stream movies in various formats (mkv, mp4, etc.) from anywhere.
 
-- **ascii art interface** 🌈  
-  enjoy an engaging browsing experience with pystyle and taurii doors.
+- **ascii art interface** 🖤
+  enjoy an engaging browsing experience with pystyle.
 
 ## ⚙️ installation 
 
@@ -58,10 +59,6 @@ cd kinoflix
 python main.py
 ```
 
-here’s a refined version of the instructions for adding a movie:
-
----
-
 ## 🎬 adding a movie 
 
 to add a movie to **kinoflix**, follow these steps:
@@ -84,13 +81,9 @@ to add a movie to **kinoflix**, follow these steps:
    - open the renamed `.yml` file in Notepad or any plain text editor.
    - update the details as needed.
 
----
-
-let me know if you need any more modifications!
-
 ## 🖥️ usage 
 
-1. open your web browser and navigate to `http://localhost:5000`.
+1. open your web browser and navigate to the printed url.
 2. log in with your credentials.
 3. enjoy streaming your favorite movies!
 
