@@ -11,6 +11,16 @@
 
 **kinoflix** is a flask-based media server designed for streaming and managing your movie collection with ease. enjoy a sleek, user-friendly interface and seamless navigation.
 
+
+
+## ✅ to-do list 
+
+- [ ] settings menu ⚙️
+- [ ] account management 👤
+- [ ] search bar 🔍
+
+you can add or modify items as needed!
+
 ## 🚀 features 
 
 - **user authentication** 🔑  
