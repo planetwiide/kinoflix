@@ -19,6 +19,8 @@
 - [ ] account management 👤
 - [ ] user managment app 🌩️
 - [ ] search bar 🔍
+- [ ] in app media edit 📋
+- [ ] anime/series support 🏯
 
 ## 🚀 features 
 
