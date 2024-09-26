@@ -1,0 +1,9 @@
+# users.yml structure
+
+# users should be inputted exactly like this:
+users:
+  - username: "Username1" # You can put emails as well
+    password: "Password1"
+
+  - username: "Username2"
+    password: "Password2"

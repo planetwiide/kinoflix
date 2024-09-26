@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-KyZXEAg3QhqLMpG8r+Knujsl5/3nTPfC5vD9z4h2C5Q4jHRg5/ExrjFuB3w2Gy3l6E/F4C8tW9jUKqR68EL9Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/images/kinoflix.ico">
+    <title>kinoflix - dashboard</title>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/images/kinoflix.png" alt="Kinoflix Logo">
+                <h1>Kinoflix</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> Account</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <div class="search-container">
+                <input type="text" placeholder="Search for movies..." />
+            </div>
+            <div class="movies-container">
+                {{ movie_cards }}
+            </div>
+        </main>
+    </div>
+
+<style>
+
+@import url("https://fonts.googleapis.com/css?family=Inria+Sans:400,700&display=swap");
+
+:root {
+  --bg-color: #1c1c1c;
+  --card-bg: #2c2c2c;
+  --accent-color: #00bcd4;
+  --dark-accent: #0097a7;
+  --grey: #aaa;
+  --text-color: #ffffff;
+}
+
+body {
+  font-family: "Inria Sans", sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--dark-accent);
+  padding: 20px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.movies-container {
+  display: flex;
+  
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 0.4rem;
+  overflow: hidden;
+  width: 320px;
+  box-shadow: 0 0 0.4rem rgba(white, 0.1);
+}
+
+.card-header {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: height 0.3s;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.sub-text {
+  color: var(--grey);
+}
+
+.list-episodes {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card-link-footer {
+  display: block;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.card-link-footer:hover {
+  color: white;
+  box-shadow: inset 0 -56px 0 var(--accent-color);
+  transition: 0.2s;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-1 {
+  margin-bottom: 0.4rem;
+}
+
+
+</style>
+</body>
+</html>
