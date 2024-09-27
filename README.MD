@@ -21,6 +21,7 @@
 - [ ] search bar 🔍
 - [ ] in app media edit 📋
 - [ ] anime/series support 🏯
+- [ ] auto fetch media informations (imdb) 🎀
 
 ## 🚀 features 
 
