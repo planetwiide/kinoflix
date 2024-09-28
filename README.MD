@@ -15,7 +15,7 @@
 
 ## ✅ to-do list 
 
-- [ ] settings menu (themes, rename, pfp) ⚙️
+- [x] theme managment
 - [ ] account management 👤
 - [ ] user managment app 🌩️
 - [ ] search bar 🔍
