@@ -16,7 +16,6 @@
 ## ✅ to-do list 
 
 - [x] theme managment
-- [ ] account management 👤
 - [ ] user managment app 🌩️
 - [ ] search bar 🔍
 - [ ] in app media edit 📋
