@@ -116,7 +116,7 @@ def index_route():
             movie['filename'] = movie_info.split('.')[0]  # Add the filename to the movie info dictionary
             
             # Check if a cover image exists for the movie
-            cover_image = f'{movie["filename"]}.png'
+            cover_image = f'{movie["name"]}.png'
             if os.path.exists(f'media_infos/{cover_image}'):
                 movie['cover_image'] = f'/static/media_infos/{cover_image}'
             else:
@@ -233,13 +233,13 @@ def display_ui():
     """Display the kinoflix user interface."""
     System.Clear()
     print("\n" * 2)
-    print(Colorate.Diagonal(Colors.purple_to_red, Center.XCenter(kinoflix_banner)))
+    print(Colorate.Diagonal(Colors.blue_to_cyan, Center.XCenter(kinoflix_banner)))
     print(" ")
-    print(Colorate.Diagonal(Colors.purple_to_red, Center.XCenter("v1.0.0 - github.com/planetwiide/kinoflix")))
+    print(Colorate.Diagonal(Colors.blue_to_cyan, Center.XCenter("v1.0.0 - github.com/planetwiide/kinoflix")))
     print("\n" * 5)
 
 # Banner animation display
-Anime.Fade(Center.Center(banner_image), Colors.purple_to_red,
+Anime.Fade(Center.Center(banner_image), Colors.blue_to_cyan,
            Colorate.Diagonal, enter=True)
 
 # Start the Flask application
@@ -257,10 +257,10 @@ def main():
 
     # Get user input for IP address and port, with default values
     host = Write.Input(login + " ┃ input IP address (0.0.0.0 for all devices, press enter to automate): ",
-                       Colors.purple_to_red, interval=0.000001) or local_ip
+                       Colors.blue_to_cyan, interval=0.000001) or local_ip
     print(" ")
     port = Write.Input(login + " ┃ input port (press enter to automate 8080): ",
-                       Colors.purple_to_red, interval=0.000001) or "8080"
+                       Colors.blue_to_cyan, interval=0.000001) or "8080"
     
     try:
         port = int(port)
@@ -269,18 +269,58 @@ def main():
         return
 
     print(" ")
-    Write.Input(login + " ┃ press enter to run the server ", Colors.purple_to_red, interval=0.000001)
+    Write.Input(login + " ┃ press enter to run the server ", Colors.blue_to_cyan, interval=0.000001)
 
     # Generate the URL and start the Flask server
     url = f"http://{host}:{port}/"
     
     display_ui()
-    print(Colorate.Vertical(Colors.purple_to_red, f"{login} ┃ running on: {url}"))
+    print(Colorate.Vertical(Colors.blue_to_cyan, f"{login} ┃ running on: {url}"))
     print(Colors.green, end='')
 
     start_flask_app(host=host, port=port)
 
 
+@app.route('/search', methods=['GET'])
+def search():
+    query = request.args.get('query', '').lower()
+
+    # Load movie data directly into the card generation function
+    def generate_movie_cards():
+        cards = ''
+        for filename in os.listdir('media_infos'):
+            if filename.endswith('.yml'):
+                with open(os.path.join('media_infos', filename), 'r', encoding='utf-8') as file:
+                    movie_info = yaml.safe_load(file)
+                    movie_name = movie_info['name'].lower()
+                    movie_category = movie_info['category'].lower()
+                    movie_year = str(movie_info['year'])
+
+                    # Check if the query is in the movie name, genre, or year
+                    if query in movie_name or query in movie_category or query in movie_year:
+                        cover_image = f'{movie_info["name"]}.png'
+                        if not os.path.exists(f'media_infos/{cover_image}'):
+                            cover_image = 'img/kinoflix.png'  # Default cover image
+
+                        movie_file = movie_info.get('filename', '').replace(" ", "_")
+
+                        # Generate the movie card HTML using the same layout as the dashboard
+                        cards += f'''
+                        <div class="card">
+                            <div class="card-header" style="background-image: url('/static/media_infos/{cover_image}');">
+                                <h2 class="card-title">{movie_info["name"]}</h2>
+                            </div>
+                            <div class="card-body">
+                                <p class="sub-text">{movie_info["category"]} • {movie_info["year"]}</p>
+                                <h4 class="mt-0 mb-1">Description</h4>
+                                <p class="description">{movie_info["description"]}</p>
+                            </div>
+                            <a class="card-link-footer" href="/player/{movie_info["name"]}">Watch movie</a>
+                        </div>
+                        '''
+        return cards
+
+    return render_template('search.html', movie_cards=generate_movie_cards())
 
 # Entry point to run the application
 if __name__ == '__main__':
