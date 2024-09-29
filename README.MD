@@ -17,10 +17,10 @@
 
 - [x] theme managment
 - [ ] user managment app 🌩️
-- [ ] search bar 🔍
+- [x] search bar 🔍
 - [ ] in app media edit 📋
 - [ ] anime/series support 🏯
-- [ ] auto fetch media informations (imdb) 🎀
+- [ ] auto fetch media informations with an api (imdb) 🎀
 
 ## 🚀 features 
 
