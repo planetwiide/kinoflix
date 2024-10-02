@@ -7,7 +7,7 @@
 ![🆙](https://img.shields.io/github/last-commit/planetwiide/kinoflix)
 ![📚](https://img.shields.io/github/license/planetwiide/kinoflix)
 
-## 🌟 kinoflix | v1.0.0
+## 🏯 kinoflix | v1.0.1
 
 **kinoflix** is a flask-based media server designed for streaming and managing your movie collection with ease. enjoy a sleek, user-friendly interface and seamless navigation.
 
