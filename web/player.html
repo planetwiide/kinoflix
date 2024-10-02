@@ -34,7 +34,7 @@
             <div class="player-container">
                 <video id="player" class="plyr__video-embed" controls>
                     <source src="{{ filename }}" type="video/mp4">
-                    <track kind="captions" label="English" srclang="en" src="captions-en.vtt" default>
+
                 </video>
             </div>
         </main>
@@ -85,13 +85,12 @@
                 'duration',      // Total duration
                 'mute',          // Mute/unmute button
                 'volume',        // Volume slider
-                'captions',      // Captions toggle
                 'settings',      // Settings menu (speed, quality, etc.)
                 'download',      // Download button
                 'fullscreen'     // Fullscreen toggle
             ],
             autoplay: false,
-            settings: ['captions', 'quality', 'speed'],
+            settings: ['quality', 'speed'],
             captions: { active: true, update: true, language: 'auto' }
         });
     </script>
