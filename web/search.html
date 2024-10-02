@@ -131,10 +131,15 @@
             width: 150px;
         }
 
-        .movies-container {
+
+        .movie-list {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-direction: row; /* Aligns items in a horizontal row */
+            flex-wrap: nowrap; /* Prevents wrapping to the next line */
+            gap: 20px; /* Adds space between the cards */
+            overflow-x: auto; /* Allows horizontal scrolling if the content exceeds the width */
+            overflow-y: hidden; /* Prevents vertical scrolling */
+            padding: 10px; /* Optional: Adds some padding around the movie list */
         }
 
         .card {
@@ -267,9 +272,6 @@
             font-size: 0.8rem;  /* Make the text smaller */
         }
 
-        .movies-container {
-            flex-direction: column;  /* Stack the cards vertically */
-        }
         }
 
         
