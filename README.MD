@@ -15,9 +15,11 @@
 
 ## ✅ to-do list 
 
-- [x] theme managment
-- [ ] user managment app 🌩️
+- [x] theme managment ⚡
+- [x] fix not working on phone 🍃
 - [x] search bar 🔍
+- [x] security fixes 🫀
+- [ ] user managment app 🌩️
 - [ ] in app media edit 📋
 - [ ] anime/series support 🏯
 - [ ] auto fetch media informations with an api (imdb) 🎀
