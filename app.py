@@ -1,4 +1,4 @@
-# kinoflix - v1.0.0
+# kinoflix - v1.0.1
 # Author: Planetwide
 # Description:
 # This script sets up a Flask-based web application named "kinoflix" for 
@@ -235,7 +235,7 @@ def display_ui():
     print("\n" * 2)
     print(Colorate.Diagonal(Colors.blue_to_cyan, Center.XCenter(kinoflix_banner)))
     print(" ")
-    print(Colorate.Diagonal(Colors.blue_to_cyan, Center.XCenter("v1.0.0 - github.com/planetwiide/kinoflix")))
+    print(Colorate.Diagonal(Colors.blue_to_cyan, Center.XCenter("v1.0.1 - github.com/planetwiide/kinoflix")))
     print("\n" * 5)
 
 # Banner animation display
