@@ -120,7 +120,7 @@ def index_route():
             if os.path.exists(f'media_infos/{cover_image}'):
                 movie['cover_image'] = f'/static/media_infos/{cover_image}'
             else:
-                movie['cover_image'] = 'img/kinoflix.png'  # Use a default cover image if none exists
+                movie['cover_image'] = '/static/img/kinoflix.png'  # Use a default cover image if none exists
             
             # Check if a movie file exists for the movie
             movie_file = f'{movie["filename"]}.mp4'
