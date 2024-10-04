@@ -1,0 +1,4 @@
+*.js linguist-language=JavaScript
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
+*.md linguist-language=Markdown
