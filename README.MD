@@ -19,7 +19,7 @@
 - [x] fix not working on phone 🍃
 - [x] search bar 🔍
 - [x] security fixes 🫀
-- [ ] in app media edit 📋
+- [ ] in app media edit 📋 (figured out how to do it, adding it in the week)
 - [ ] anime/series support 🏯
 - [ ] auto fetch media informations with an api (imdb) 🎀
 
