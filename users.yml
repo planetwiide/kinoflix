@@ -1,9 +1,19 @@
 # users.yml structure
 
 # users should be inputted exactly like this:
-users:
-  - username: "Username1" # You can put emails as well
-    password: "Password1"
 
-  - username: "Username2"
-    password: "Password2"
+
+#users:
+#  - username: "Nil"
+#    password: "123"
+#
+#  - username: "nil.chass1@gmail.com"
+#    password: "456"
+
+
+users:
+  - username: "User1"
+    password: "123"
+
+  - username: "User2"
+    password: "456"
