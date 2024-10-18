@@ -3,13 +3,8 @@
 # users should be inputted exactly like this:
 
 
-#users:
+# users:
 #  - username: "Nil"
-#    password: "123"
-#
-#  - username: "nil.chass1@gmail.com"
-#    password: "456"
-
 
 users:
   - username: "User1"
